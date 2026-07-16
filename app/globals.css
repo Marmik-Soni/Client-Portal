@@ -22,3 +22,38 @@ h5,
 h6 {
   font-family: var(--font-gloock), serif;
 }
+
+/* Fluid Typography, Content-Driven Layouts & Spacing (clamp & auto-fit grids) */
+@layer utilities {
+  .fluid-h1 {
+    font-size: clamp(2.25rem, 5vw + 1rem, 4.5rem);
+    line-height: 1.1;
+  }
+
+  .fluid-h2 {
+    font-size: clamp(1.5rem, 3vw + 0.75rem, 2.5rem);
+    line-height: 1.15;
+  }
+
+  .fluid-p {
+    font-size: clamp(0.875rem, 0.5vw + 0.75rem, 1.125rem);
+  }
+
+  .fluid-section-p {
+    padding: clamp(1rem, 3vw + 0.5rem, 2.5rem);
+  }
+
+  .fluid-card-p {
+    padding: clamp(1.25rem, 2.5vw + 0.5rem, 2rem);
+  }
+
+  .fluid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  }
+
+  .fluid-grid-sm {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  }
+}

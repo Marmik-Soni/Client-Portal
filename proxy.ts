@@ -1,7 +1,7 @@
 import { createServerClient } from "@supabase/ssr";
 import { type NextRequest, NextResponse } from "next/server";
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   let supabaseResponse = NextResponse.next({
     request,
   });
@@ -27,7 +27,7 @@ export async function middleware(request: NextRequest) {
     }
   );
 
-  // IMPORTANT: Avoid using supabase.auth.getSession() in middleware for protection.
+  // IMPORTANT: Avoid using supabase.auth.getSession() in proxy for protection.
   // Always use getUser() to validate session with Supabase auth server.
   const {
     data: { user },

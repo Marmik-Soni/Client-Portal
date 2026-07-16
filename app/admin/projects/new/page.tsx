@@ -24,7 +24,7 @@ export default function NewProjectPage() {
   }
 
   return (
-    <div className="mx-auto max-w-4xl space-y-8 p-8">
+    <div className="fluid-section-p mx-auto max-w-4xl space-y-8">
       {/* Back Navigation & Title */}
       <div>
         <Link
@@ -34,7 +34,7 @@ export default function NewProjectPage() {
           <ArrowLeft className="h-3.5 w-3.5" />
           <span>Back to Projects</span>
         </Link>
-        <h1 className="text-3xl font-normal tracking-tight text-white">Create New Project</h1>
+        <h1 className="fluid-h2 font-normal tracking-tight text-white">Create New Project</h1>
         <p className="mt-1 text-sm text-neutral-400">
           Set up a workspace and invite your client to collaborate.
         </p>
@@ -49,7 +49,7 @@ export default function NewProjectPage() {
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
         {/* Form Container */}
-        <div className="relative rounded-2xl border border-neutral-800/80 bg-neutral-950 p-6 shadow-xl sm:p-8 md:col-span-2">
+        <div className="fluid-card-p relative rounded-2xl border border-neutral-800/80 bg-neutral-950 shadow-xl md:col-span-2">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
               <label
@@ -68,7 +68,7 @@ export default function NewProjectPage() {
               />
             </div>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="fluid-grid-sm gap-4">
               <div className="space-y-2">
                 <label
                   htmlFor="client_email"
@@ -156,17 +156,17 @@ export default function NewProjectPage() {
               </div>
             </div>
 
-            <div className="flex items-center justify-end gap-3 border-t border-neutral-900 pt-4">
+            <div className="flex flex-col-reverse items-stretch justify-end gap-3 border-t border-neutral-900 pt-4 sm:flex-row sm:items-center">
               <Link
                 href="/admin"
-                className="rounded-xl px-5 py-3 text-sm font-medium text-neutral-400 transition-colors hover:text-white"
+                className="flex w-full items-center justify-center rounded-xl px-5 py-3 text-sm font-medium text-neutral-400 transition-colors hover:bg-neutral-900 hover:text-white sm:w-auto sm:hover:bg-transparent"
               >
                 Cancel
               </Link>
               <button
                 type="submit"
                 disabled={isPending}
-                className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black shadow-lg shadow-white/5 transition-all duration-150 hover:bg-neutral-200 active:scale-[0.99] disabled:opacity-50"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black shadow-lg shadow-white/5 transition-all duration-150 hover:bg-neutral-200 active:scale-[0.99] disabled:opacity-50 sm:w-auto"
               >
                 {isPending ? (
                   <span>Creating...</span>

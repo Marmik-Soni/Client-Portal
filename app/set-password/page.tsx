@@ -23,8 +23,8 @@ export default function SetPasswordPage() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-black px-4 text-white selection:bg-neutral-800">
-      <div className="relative w-full max-w-md overflow-hidden rounded-2xl border border-neutral-800/80 bg-neutral-950 p-8 shadow-2xl">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-black px-4 py-8 text-white selection:bg-neutral-800">
+      <div className="fluid-card-p relative w-full max-w-md overflow-hidden rounded-2xl border border-neutral-800/80 bg-neutral-950 shadow-2xl">
         {/* Top accent line */}
         <div className="absolute top-0 left-1/2 h-[1px] w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-neutral-300 to-transparent opacity-60" />
 
@@ -32,7 +32,7 @@ export default function SetPasswordPage() {
           <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-neutral-800 bg-neutral-900 text-emerald-400 shadow-inner">
             <CheckCircle2 className="h-6 w-6" />
           </div>
-          <h1 className="mb-2 text-3xl font-normal tracking-tight text-white">
+          <h1 className="fluid-h2 mb-2 font-normal tracking-tight text-white">
             Welcome to Your Portal
           </h1>
           <p className="text-sm font-medium text-neutral-400">

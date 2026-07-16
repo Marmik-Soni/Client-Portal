@@ -23,8 +23,8 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-black px-4 text-white selection:bg-neutral-800">
-      <div className="relative w-full max-w-md overflow-hidden rounded-2xl border border-neutral-800/80 bg-neutral-950 p-8 shadow-2xl shadow-black/80">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-black px-4 py-8 text-white selection:bg-neutral-800">
+      <div className="fluid-card-p relative w-full max-w-md overflow-hidden rounded-2xl border border-neutral-800/80 bg-neutral-950 shadow-2xl shadow-black/80">
         {/* Subtle top glow highlight */}
         <div className="absolute top-0 left-1/2 h-[1px] w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-neutral-400 to-transparent opacity-50" />
 
@@ -32,7 +32,7 @@ export default function LoginPage() {
           <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-neutral-800 bg-neutral-900 text-neutral-200 shadow-inner">
             <ShieldCheck className="h-6 w-6" />
           </div>
-          <h1 className="mb-2 text-4xl font-normal tracking-tight text-white">Client Portal</h1>
+          <h1 className="fluid-h2 mb-2 font-normal tracking-tight text-white">Client Portal</h1>
           <p className="text-sm font-medium text-neutral-400">
             Sign in to access your projects, files, and updates.
           </p>

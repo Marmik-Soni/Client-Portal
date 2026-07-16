@@ -33,7 +33,7 @@ export default async function ClientDashboardPage() {
     <div className="space-y-8 py-4">
       {/* Header */}
       <div className="border-b border-neutral-800 pb-6">
-        <h1 className="text-3xl font-normal tracking-tight text-white">My Projects</h1>
+        <h1 className="fluid-h2 font-normal tracking-tight text-white">My Projects</h1>
         <p className="mt-1 text-sm text-neutral-400">
           Select a project to view files, check real-time progress, or send a message to our team.
         </p>
@@ -41,7 +41,7 @@ export default async function ClientDashboardPage() {
 
       {/* Projects Grid */}
       {typedProjects.length === 0 ? (
-        <div className="mx-auto mt-12 max-w-lg rounded-2xl border border-dashed border-neutral-800 bg-neutral-950/40 p-12 text-center">
+        <div className="fluid-card-p mx-auto mt-12 max-w-lg rounded-2xl border border-dashed border-neutral-800 bg-neutral-950/40 text-center">
           <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-neutral-800 bg-neutral-900 text-neutral-400 shadow-inner">
             <FolderKanban className="h-6 w-6" />
           </div>
@@ -52,12 +52,12 @@ export default async function ClientDashboardPage() {
           </p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="fluid-grid gap-6">
           {typedProjects.map((project) => (
             <Link
               key={project.id}
               href={`/dashboard/projects/${project.id}`}
-              className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-neutral-800/80 bg-neutral-950 p-6 transition-all duration-200 hover:border-neutral-700 hover:shadow-xl hover:shadow-black/60"
+              className="group fluid-card-p @container relative flex flex-col justify-between overflow-hidden rounded-2xl border border-neutral-800/80 bg-neutral-950 transition-all duration-200 hover:border-neutral-700 hover:shadow-xl hover:shadow-black/60"
             >
               <div className="absolute top-0 right-0 left-0 h-[1px] bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-0 transition-opacity group-hover:opacity-40" />
 
@@ -76,7 +76,7 @@ export default async function ClientDashboardPage() {
                 </p>
               </div>
 
-              <div className="flex items-center justify-between border-t border-neutral-900 pt-4 text-xs text-neutral-500">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-t border-neutral-900 pt-4 text-xs text-neutral-500 sm:flex-nowrap">
                 <span className="font-medium text-neutral-400">View Workspace &rarr;</span>
                 <div className="flex flex-shrink-0 items-center gap-1.5">
                   <Clock className="h-3.5 w-3.5 text-neutral-600" />

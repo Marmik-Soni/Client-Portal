@@ -25,7 +25,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   }
 
   return (
-    <div className="flex min-h-screen bg-black text-white selection:bg-neutral-800">
+    <div className="flex min-h-screen flex-col bg-black text-white selection:bg-neutral-800 lg:flex-row">
       <AdminSidebar email={profile.email || user.email!} fullName={profile.full_name} />
       <main className="min-w-0 flex-1 overflow-y-auto">{children}</main>
     </div>
